@@ -12,6 +12,7 @@ namespace DissolveExample
         List<Material> materials = new List<Material>();
         public bool PingPong = false;
         [SerializeField] SkinnedMeshRenderer broken, healthy;
+        [SerializeField] private GameObject largeFlames_ParticleSystem;
 
         public float value;
 
@@ -42,9 +43,13 @@ namespace DissolveExample
             }
         }
 
+        public void ParticleSystem() {
+            
+        }
+
         public void Shader_Dissolve_Activated() {
             Debug.Log("shader Activated 1...");
-
+            largeFlames_ParticleSystem.SetActive(true);
             eventone = true;
             eventtwo = false;
             // make delay here....
@@ -54,6 +59,7 @@ namespace DissolveExample
         public void Shader_Dissolve_Activated1() {
             Debug.Log("shader Activated 2...");
             value = 1;
+            largeFlames_ParticleSystem.SetActive(false);
             eventone = false;
             eventtwo = true;
             // make delay here....
