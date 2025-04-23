@@ -43,8 +43,8 @@ namespace DissolveExample
             }
         }
 
-        public void ParticleSystem() {
-            
+        public void ParticleSystem_Deactivated() {
+            largeFlames_ParticleSystem.SetActive(false);
         }
 
         public void Shader_Dissolve_Activated() {
@@ -59,7 +59,7 @@ namespace DissolveExample
         public void Shader_Dissolve_Activated1() {
             Debug.Log("shader Activated 2...");
             value = 1;
-            largeFlames_ParticleSystem.SetActive(false);
+
             eventone = false;
             eventtwo = true;
             // make delay here....

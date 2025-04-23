@@ -14,6 +14,7 @@ public class First_Interactable : MonoBehaviour {
     [SerializeField] private GameObject details_Txt;
     [SerializeField] private GameObject heartlungTxt;
     [SerializeField] private GameObject referenceTxt;
+    [SerializeField] private GameObject pulse_UI;
     [SerializeField] private BoxCollider[] boxColliders;
 
     bool aboveTxt_OnActivated;
@@ -51,6 +52,7 @@ public class First_Interactable : MonoBehaviour {
         boxColliders[0].enabled = true;
         boxColliders[1].enabled = true;
         details_Txt.SetActive(true);
+        pulse_UI.SetActive(true);
     }
 
     private void RayCast_Activated() {
@@ -115,6 +117,7 @@ public class First_Interactable : MonoBehaviour {
         above_Txt.SetActive(false);
         bottom_Txt.SetActive(false);
         details_Txt.SetActive(false);
+        pulse_UI.SetActive(false);
     }
 
     public void healthyLung_Activated() {
